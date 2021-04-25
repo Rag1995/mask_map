@@ -37,7 +37,6 @@ export default {
   }),
   mounted() {
     this.initMap();
-    this.test();
   },
   methods: {
     initMap() {
@@ -47,8 +46,9 @@ export default {
         attribution: this.attribution,
       });
       this.tileLayer.addTo(this.map);
+      this.getMarkers();
     },
-    test() {
+    getMarkers() {
       maskApi
         .findAll()
         .then(res => {
@@ -62,7 +62,8 @@ export default {
           markers
             .addLayer(geoJsonLayer)
             .on('click', ({ layer }) => {
-              console.log('OK', layer);
+              const id = layer.feature.properties.id;
+              console.log('OK', id);
             });
           this.map.addLayer(markers);
 
