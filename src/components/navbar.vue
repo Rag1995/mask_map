@@ -1,7 +1,7 @@
 <template>
   <b-navbar
     toggleable="lg"
-    variant="info"
+    variant="dark"
     type="dark"
   >
     <b-navbar-brand class="text-black">
@@ -11,7 +11,7 @@
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
     <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class="ml-4">
+      <b-navbar-nav>
         <router-link
           v-for="(item, idx) in nav"
           :key="idx"
