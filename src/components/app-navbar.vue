@@ -1,6 +1,6 @@
 <template>
   <b-navbar id="app-navbar" toggleable="lg" variant="dark" type="dark">
-    <b-navbar-brand class="text-black">口罩地圖</b-navbar-brand>
+    <b-navbar-brand class="text-black">台灣口罩地圖</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -14,6 +14,7 @@
           custom
         >
           <b-nav-item @click="navigate">
+            <fa-icon :icon="item.icon" fixed-width />
             {{ item.title }}
           </b-nav-item>
         </router-link>
@@ -23,29 +24,21 @@
 </template>
 
 <script>
+import { library } from "@fortawesome/fontawesome-svg-core";
 import {
-  BNavbar,
-  BNavbarNav,
-  BNavItem,
-  BNavbarBrand,
-  BNavbarToggle,
-  BCollapse,
-} from "bootstrap-vue";
+  faMapMarkerAlt,
+  faInfoCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default {
-  components: {
-    "b-navbar": BNavbar,
-    "b-navbar-nav": BNavbarNav,
-    "b-nav-item": BNavItem,
-    "b-navbar-brand": BNavbarBrand,
-    "b-navbar-toggle": BNavbarToggle,
-    "b-collapse": BCollapse,
-  },
   data: () => ({
     nav: [
-      { title: "首頁", to: { name: "Home" } },
-      { title: "關於", to: { name: "About" } },
+      { title: "首頁", icon: "map-marker-alt", to: { name: "Home" } },
+      { title: "關於", icon: "info-circle", to: { name: "About" } },
     ],
   }),
+  created() {
+    library.add(faMapMarkerAlt, faInfoCircle);
+  },
 };
 </script>

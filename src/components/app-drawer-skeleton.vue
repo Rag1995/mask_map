@@ -36,6 +36,10 @@
         }"
       ></b-skeleton-table>
     </template>
+
+    <template #updatedAt>
+      <b-skeleton width="65%" />
+    </template>
   </app-drawer-container>
 </template>
 

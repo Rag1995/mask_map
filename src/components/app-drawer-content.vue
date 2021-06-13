@@ -29,6 +29,10 @@
       <p>服務時段：</p>
       <open-on-table :data="data.opensOn"></open-on-table>
     </template>
+
+    <template #updatedAt>
+      最後更新時間：{{ data.updatedAt | datetime }}
+    </template>
   </app-drawer-container>
 </template>
 
@@ -39,6 +43,13 @@ export default {
     "app-drawer-container": () => import("./app-drawer-container.vue"),
     "open-on-table": () => import("../components/open-on-table.vue"),
     "mask-left-content": () => import("./mask-left-content.vue"),
+  },
+  filters: {
+    datetime(val) {
+      const date = val.slice(0, 10);
+      const time = val.slice(11, 19);
+      return `${date} ${time}`;
+    },
   },
 };
 </script>

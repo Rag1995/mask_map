@@ -24,7 +24,7 @@
     </p>
 
     <p class="text-right">
-      <slot name="updateAt" />
+      <slot name="updatedAt" />
     </p>
   </b-card-body>
 </template>

@@ -12,11 +12,11 @@
       <b-tr v-for="(period, i) in periods" :key="i">
         <b-th sticky-column>{{ period }}</b-th>
         <b-td v-for="(item, j) in data" :key="j">
-          <b-icon
+          <fa-icon
             v-if="item.indexOf(period) > -1"
-            icon="check-circle-fill"
-            variant="success"
-          ></b-icon>
+            icon="check-circle"
+            class="text-success"
+          ></fa-icon>
         </b-td>
       </b-tr>
     </b-tbody>
@@ -24,6 +24,9 @@
 </template>
 
 <script>
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+
 export default {
   props: ["data"],
   data: () => ({
@@ -38,22 +41,8 @@ export default {
     ],
     periods: ["上午", "下午", "晚上"],
   }),
-  computed: {
-    // data() {
-    //   if (this.rawData.length === 0) {
-    //     return [];
-    //   } else {
-    //     return this.time.map((el) => {
-    //       const trade = this.rawData.reduce((acc, cur, idx) => {
-    //         acc[idx];
-    //         return { ...acc, trade: cur.indexOf(el) > -1 };
-    //       }, {});
-    //       return {
-    //         time: el,
-    //       };
-    //     });
-    //   }
-    // },
+  created() {
+    library.add(faCheckCircle);
   },
 };
 </script>

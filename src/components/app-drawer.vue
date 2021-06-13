@@ -14,7 +14,7 @@
         <btn-close class="ml-auto" white @click="close()"></btn-close>
       </b-card-header>
 
-      <div class="h-100 overflow-auto pb-5">
+      <div class="overflow-y-scroll h-100 pb-5">
         <b-skeleton-wrapper :loading="loading">
           <template #loading>
             <app-drawer-skeleton />
