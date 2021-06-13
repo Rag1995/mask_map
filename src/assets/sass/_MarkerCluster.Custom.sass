@@ -1,0 +1,44 @@
+.marker-cluster-
+  &small,
+  &medium,
+  &large
+    background-color: rgba(132, 188, 218, 0.6)
+    div
+      background-color: rgba(0, 123, 255, 0.6)
+
+/* IE 6-8 fallback colors */
+.leaflet-oldie
+  .marker-cluster-
+    &small,
+    &medium,
+    &large
+      background-color: rgb(132, 188, 218)
+      div
+        background-color: rgb(0, 123, 255)
+
+.circle
+  width: 32px
+  height: 32px
+  line-height: 32px
+  text-align: center
+  background-color: #ff0000
+
+.marker-cluster
+  background-clip: padding-box
+  border-radius: 50%
+  background-color: rgba(132, 188, 218, 0.5)
+  display: flex
+  justify-content: center
+  align-items: center
+
+  div
+    width: 61.8%
+    height: 61.8%
+
+    text-align: center
+    border-radius: 50%
+    font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif
+    background-color: rgba(0, 123, 255, 0.6)
+
+  span
+    line-height: 1

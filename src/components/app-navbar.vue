@@ -1,12 +1,6 @@
 <template>
-  <b-navbar
-    toggleable="lg"
-    variant="dark"
-    type="dark"
-  >
-    <b-navbar-brand class="text-black">
-      口罩地圖
-    </b-navbar-brand>
+  <b-navbar id="app-navbar" toggleable="lg" variant="dark" type="dark">
+    <b-navbar-brand class="text-black">口罩地圖</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -36,22 +30,22 @@ import {
   BNavbarBrand,
   BNavbarToggle,
   BCollapse,
-} from 'bootstrap-vue'
+} from "bootstrap-vue";
 
 export default {
   components: {
-    'b-navbar': BNavbar,
-    'b-navbar-nav': BNavbarNav,
-    'b-nav-item': BNavItem,
-    'b-navbar-brand': BNavbarBrand,
-    'b-navbar-toggle': BNavbarToggle,
-    'b-collapse': BCollapse,
+    "b-navbar": BNavbar,
+    "b-navbar-nav": BNavbarNav,
+    "b-nav-item": BNavItem,
+    "b-navbar-brand": BNavbarBrand,
+    "b-navbar-toggle": BNavbarToggle,
+    "b-collapse": BCollapse,
   },
   data: () => ({
     nav: [
-      { title: '首頁', to: { name: 'Home' } },
-      { title: '關於', to: { name: 'About' } },
-    ]
-  })
-}
+      { title: "首頁", to: { name: "Home" } },
+      { title: "關於", to: { name: "About" } },
+    ],
+  }),
+};
 </script>

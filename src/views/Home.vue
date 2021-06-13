@@ -1,16 +1,15 @@
 <template>
-  <div class="home full-container">
-    <my-map></my-map>
+  <div class="home full-container overflow-hidden">
+    <app-drawer />
+    <app-map />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home',
   components: {
-    'my-map': () => import('@/components/map'),
+    "app-map": () => import("../components/app-map"),
+    "app-drawer": () => import("../components/app-drawer"),
   },
-  methods: {
-  }
-}
+};
 </script>

@@ -1,0 +1,30 @@
+.drawer-enter-active,
+.drawer-leave-active
+  transition: all .5s
+
+.drawer-enter,
+.drawer-leave-to
+  white-space: nowrap
+  text-overflow: ellipsis
+
+.mask-left-container:first-child
+  @extend .mr-4, .pr-2
+
+@include media-breakpoint-up(md)
+  .drawer
+    width: 400px
+    flex-shrink: 0
+  .drawer-enter,
+  .drawer-leave-to
+    width: 0px
+
+@include media-breakpoint-down(sm)
+  .drawer
+    height: 55vh
+  .drawer-enter,
+  .drawer-leave-to
+    height: 0vh
+
+@media (max-width: 380px)
+  .mask-left-container:first-child
+    margin-bottom: $spacer
