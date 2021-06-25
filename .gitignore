@@ -2,6 +2,8 @@
 node_modules
 /dist
 
+# depoly file
+deploy.sh
 
 # local env files
 .env.local
