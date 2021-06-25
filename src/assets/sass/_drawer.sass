@@ -8,9 +8,11 @@
   text-overflow: ellipsis
 
 .mask-left-container:first-child
-  @extend .mr-4, .pr-2
+  margin-right: 1.5rem
+  padding-right: 0.5rem
 
-@include media-breakpoint-up(md)
+// @include media-breakpoint-up(md)
+@media (min-width: 768px)
   .drawer
     width: 400px
     flex-shrink: 0
@@ -18,7 +20,8 @@
   .drawer-leave-to
     width: 0px
 
-@include media-breakpoint-down(sm)
+// @include media-breakpoint-down(sm)
+@media (max-width: 767.98px)
   .drawer
     height: 55vh
   .drawer-enter,
@@ -27,4 +30,4 @@
 
 @media (max-width: 380px)
   .mask-left-container:first-child
-    margin-bottom: $spacer
+    margin-bottom: 1rem

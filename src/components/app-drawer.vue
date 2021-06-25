@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import "@/assets/sass/_drawer.sass";
 import maskApiMixin from "@/assets/mixin/maskApiMixin.vue";
 
 export default {

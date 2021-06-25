@@ -4,7 +4,7 @@
       <p>關於這個網站</p>
       <hr />
       <p style="line-height: 2rem">
-        給不久前轉職工程師的自己的一個挑戰，以下是資料來源以及參考過的教學<br />
+        給不久前轉職工程師的自己的一個練習，以下是資料來源以及參考過的教學<br />
         希望能夠幫上有需要的人，也順便當作筆記以防之後忘記...
       </p>
       <hr />
@@ -42,7 +42,7 @@ export default {
         href: "https://medium.com/itsems-frontend/vue-event-bus-15b76f27aeb9",
       },
       {
-        label: "Vue Transitions (用來製作動畫+監聽事件)",
+        label: "Vue Transitions (用來製作動畫+監聽動畫)",
         href: "https://vuejs.org/v2/guide/transitions.html",
       },
       {
